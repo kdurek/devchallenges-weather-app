@@ -40,7 +40,6 @@
 
 ### User Stories
 
-- [ ] Example story
 - [ ] I can see city weather as default, preferably my current location
 - [ ] I can search for city
 - [ ] I can see weather of today and the next 5 days

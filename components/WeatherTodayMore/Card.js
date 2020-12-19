@@ -1,7 +1,7 @@
 const Card = ({ children, title, value, units }) => {
   return (
     <div className="flex justify-center bg-blue-c1E213A">
-      <div className="p-4 flex flex-col items-center gap-4">
+      <div className="p-4 w-full flex flex-col items-center gap-4">
         <p className="font-ral font-medium text-base text-gray-cE7E7EB">
           {title}
         </p>

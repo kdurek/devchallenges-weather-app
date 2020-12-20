@@ -58,19 +58,23 @@ export default function Home() {
               <div className="hidden xl:self-end xl:flex xl:gap-4">
                 <button
                   onClick={() => setFahrenheit(false)}
-                  className="px-3 py-2 rounded-full bg-gray-cE7E7EB focus:outline-none"
+                  className={`px-3 py-2 rounded-full bg-gray-cE7E7EB focus:outline-none ${
+                    !fahrenheit
+                      ? "bg-gray-cE7E7EB text-blue-c110E3C"
+                      : "bg-purple-c585676 text-gray-cE7E7EB"
+                  }`}
                 >
-                  <p className="align-middle font-ral font-bold text-lg text-blue-c110E3C">
-                    ℃
-                  </p>
+                  <p className="align-middle font-ral font-bold text-lg">℃</p>
                 </button>
                 <button
                   onClick={() => setFahrenheit(true)}
-                  className="px-3 py-2 rounded-full bg-purple-c585676 focus:outline-none"
+                  className={`px-3 py-2 rounded-full focus:outline-none ${
+                    fahrenheit
+                      ? "bg-gray-cE7E7EB text-blue-c110E3C"
+                      : "bg-purple-c585676 text-gray-cE7E7EB"
+                  }`}
                 >
-                  <p className="align-middle font-ral font-bold text-lg text-gray-cE7E7EB">
-                    ℉
-                  </p>
+                  <p className="align-middle font-ral font-bold text-lg">℉</p>
                 </button>
               </div>
               <WeatherWeek fahrenheit={fahrenheit} data={data} />
